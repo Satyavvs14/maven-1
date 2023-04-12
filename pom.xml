@@ -28,13 +28,27 @@
     <module>webapp</module>
   </modules>
 
-  <distributionManagement>
+<!--  <distributionManagement>
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
-  </distributionManagement>
+  </distributionManagement> -->
+
+   <distributionManagement>
+       <repository>
+	   <id>JFrog</id>
+            <name>avoka-release</name>
+	   <url>http://3.109.203.199:8082/artifactory/avoka-release/</url>
+       </repository>
+	    
+       <snapshotRepository>
+	   <id>JFrog</id>
+	   <name>avoka-snapshot</name>
+	   <url>http://3.109.203.199:8082/artifactory/avoka-snapshot/</url>
+       </snapshotRepository>
+   </distributionManagement>      
 
   <build>
     <plugins>
